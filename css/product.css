@@ -1,0 +1,146 @@
+/* Product Details Section */
+.product-details {
+  padding: 4rem 10%;
+}
+
+.product-details .container {
+  display: flex;
+  gap: 4rem;
+}
+
+.product-image {
+  flex: 1;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: #ffc107;
+}
+
+.review-count {
+  color: var(--text-color-light);
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.current-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--text-color-light);
+}
+
+.discount {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.product-description {
+  margin-bottom: 2rem;
+  color: var(--text-color-light);
+}
+
+.product-options {
+  margin-bottom: 2rem;
+}
+
+.color-options,
+.size-options {
+  margin-bottom: 1rem;
+}
+
+.color-options span,
+.size-options span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.color-option,
+.size-option {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.color-option {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.size-option {
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+}
+
+.color-option.active,
+.size-option.active {
+  box-shadow: 0 0 0 2px var(--first-color);
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.quantity-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.quantity-input {
+  width: 3rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-left: none;
+  border-right: none;
+  padding: 0.5rem;
+}
+
+.add-to-cart-btn {
+  background-color: var(--first-color);
+  color: var(--body-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--first-color-alt);
+}

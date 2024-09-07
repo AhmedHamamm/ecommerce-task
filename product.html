@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - SHOP.CO</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Proudect CSS -->
+    <link rel="stylesheet" href="css/product.css" />
+
+    <!-- Box Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Signup Banner -->
+    <section class="signup-banner">
+      <p>Sign up and get 20% off to your first order.</p>
+      <a href="#" class="signup-btn">Sign Up Now</a>
+      <button class="signp-close-btn"><i class="bx bx-x"></i></button>
+    </section>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <a href="index.html" class="logo">SHOP.CO</a>
+        <nav class="navbar">
+          <a href="#">Shop</a>
+          <a href="#">On Sale</a>
+          <a href="#">New Arrivals</a>
+          <a href="#">Brands</a>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <!-- Search -->
+        <div class="search">
+          <button><i class="bx bx-search"></i></button>
+          <input type="text" placeholder="Search for products..." />
+        </div>
+
+        <!-- Nav Icons -->
+        <div class="nav-icons">
+          <!-- Cart -->
+          <div class="cart">
+            <i class="bx bx-cart"></i>
+          </div>
+          <!-- User -->
+          <div class="user">
+            <i class="bx bx-user"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="product-details">
+      <div class="container">
+        <div class="product-image">
+          <img
+            src="img/products/one-life-graphic-t-shirt.jpg"
+            alt="One Life Graphic T-Shirt"
+          />
+        </div>
+        <div class="product-info">
+          <h1 class="product-title">ONE LIFE GRAPHIC T-SHIRT</h1>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="review-count">4.5/5</span>
+          </div>
+          <div class="product-price">
+            <span class="current-price">$260</span>
+            <span class="original-price">$300</span>
+            <span class="discount">-40%</span>
+          </div>
+          <p class="product-description">
+            This graphic t-shirt features a unique design that's perfect for any
+            occasion. Crafted from a soft and breathable fabric, it offers both
+            style and comfort.
+          </p>
+          <div class="product-options">
+            <div class="color-options">
+              <span>Color:</span>
+              <button
+                class="color-option active"
+                style="background-color: #4a5b28"
+              ></button>
+              <button
+                class="color-option"
+                style="background-color: #314443"
+              ></button>
+              <button
+                class="color-option"
+                style="background-color: #30436d"
+              ></button>
+            </div>
+            <div class="size-options">
+              <span>Choose Size:</span>
+              <button class="size-option">Small</button>
+              <button class="size-option">Medium</button>
+              <button class="size-option active">Large</button>
+              <button class="size-option">X-Large</button>
+            </div>
+          </div>
+          <div class="quantity-selector">
+            <button class="quantity-btn minus">-</button>
+            <input type="number" value="1" min="1" class="quantity-input" />
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <div class="newsletter-text">
+          <h2>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h2>
+        </div>
+        <form class="subscribe-form">
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            aria-label="Email for newsletter"
+            required
+          />
+          <button type="submit">Subscribe to Newsletter</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-logo">
+            <a href="#" class="logo">
+              <h3>SHOP.CO</h3>
+            </a>
+            <p>
+              We have clothes that suits your style and which you're proud to
+              wear. From women to men.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="#"><i class="bx bxl-instagram"></i></a>
+              <a href="#"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="link-column">
+              <h3>Company</h3>
+              <a href="#">About</a>
+              <a href="#">Features</a>
+              <a href="#">Works</a>
+              <a href="#">Career</a>
+            </div>
+            <div class="link-column">
+              <h3>Help</h3>
+              <a href="#">Customer Support</a>
+              <a href="#">Delivery Details</a>
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Privacy Policy</a>
+            </div>
+            <div class="link-column">
+              <h3>FAQ</h3>
+              <a href="#">Account</a>
+              <a href="#">Manage Deliveries</a>
+              <a href="#">Orders</a>
+              <a href="#">Payments</a>
+            </div>
+            <div class="link-column">
+              <h3>Resources</h3>
+              <a href="#">Free eBooks</a>
+              <a href="#">Development Tutorial</a>
+              <a href="#">How to - Blog</a>
+              <a href="#">Youtube Playlist</a>
+            </div>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+          <p>Shop.co © 2000-2024, All Rights Reserved</p>
+          <div class="footer-payment-methods">
+            <img src="img/payment-methods/visa.png" alt="Visa" />
+            <img src="img/payment-methods/mastercard.png" alt="Mastercard" />
+            <img src="img/payment-methods/paypal.png" alt="PayPal" />
+            <img src="img/payment-methods/a-pay.png" alt="Apple Pay" />
+            <img src="img/payment-methods/g-pay.png" alt="Google Pay" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
