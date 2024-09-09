@@ -4,7 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   text-decoration: none;
-  font-family: 'Integral CF', sans-serif;
+  font-family: "Integral CF", sans-serif;
 }
 
 :root {
@@ -115,7 +115,7 @@ body {
 }
 
 .navbar a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -322,6 +322,7 @@ section {
   text-align: center;
   margin-bottom: 3rem;
   font-weight: 900;
+  text-transform: uppercase;
 }
 
 .product-grid {
@@ -638,7 +639,7 @@ section {
   gap: 1rem;
 }
 
-.subscribe-form input[type='email'] {
+.subscribe-form input[type="email"] {
   flex-grow: 1;
   padding: 1rem;
   border: none;
