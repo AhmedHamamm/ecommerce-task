@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+
+    <!-- Box Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Signup Banner -->
+    <section class="signup-banner">
+      <p>Sign up and get 20% off to your first order.</p>
+      <a href="#" class="signup-btn">Sign Up Now</a>
+      <button class="signp-close-btn"><i class="bx bx-x"></i></button>
+    </section>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <a href="index.html" class="logo">SHOP.CO</a>
+        <nav class="navbar">
+          <a href="#">Shop</a>
+          <a href="#">On Sale</a>
+          <a href="#">New Arrivals</a>
+          <a href="#">Brands</a>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <!-- Search -->
+        <div class="search">
+          <button><i class="bx bx-search"></i></button>
+          <input type="text" placeholder="Search for products..." />
+        </div>
+
+        <!-- Nav Icons -->
+        <div class="nav-icons">
+          <!-- Cart -->
+          <div class="cart">
+            <i class="bx bx-cart"></i>
+          </div>
+          <!-- User -->
+          <div class="user">
+            <i class="bx bx-user"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <ul>
+        <li>
+          <a href="index.html">Home <i class="bx bx-chevron-right"></i> </a>
+        </li>
+        <li>Cart</li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="cart-section">
+        <h3>Your Cart</h3>
+        <div class="cart-container">
+          <div class="cart-items-wrapper">
+            <!-- Cart Item 1 -->
+            <div class="cart-item">
+              <img
+                src="img/products/graphic-tshirt.png"
+                alt="Gradient Graphic T-shirt"
+                class="cart-item-image"
+              />
+              <div class="cart-item-details">
+                <div class="cart-item-name-wrapper">
+                  <h4 class="cart-item-name">Gradient Graphic T-shirt</h4>
+                  <button class="remove-item">
+                    <i class="bx bxs-trash"></i>
+                  </button>
+                </div>
+                <div class="cart-item-options">
+                  <p>Size: <span>Large</span></p>
+                  <p>Color: <span>White</span></p>
+                </div>
+                <div class="cart-item-price-quantity-wrapper">
+                  <div class="cart-item-price">$145</div>
+                  <div class="cart-item-quantity">
+                    <div class="quantity-btns">
+                      <button class="quantity-btn minus">-</button>
+                      <input
+                        type="number"
+                        value="1"
+                        min="1"
+                        class="quantity-input"
+                      />
+                      <button class="quantity-btn plus">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cart Item 2 -->
+            <div class="cart-item">
+              <img
+                src="img/products/shirt.png"
+                alt="Gradient Graphic T-shirt"
+                class="cart-item-image"
+              />
+              <div class="cart-item-details">
+                <div class="cart-item-name-wrapper">
+                  <h4 class="cart-item-name">Gradient Graphic T-shirt</h4>
+                  <button class="remove-item">
+                    <i class="bx bxs-trash"></i>
+                  </button>
+                </div>
+                <div class="cart-item-options">
+                  <p>Size: <span>Medium</span></p>
+                  <p>Color: <span>Red</span></p>
+                </div>
+                <div class="cart-item-price-quantity-wrapper">
+                  <div class="cart-item-price">$180</div>
+                  <div class="cart-item-quantity">
+                    <div class="quantity-btns">
+                      <button class="quantity-btn minus">-</button>
+                      <input
+                        type="number"
+                        value="1"
+                        min="1"
+                        class="quantity-input"
+                      />
+                      <button class="quantity-btn plus">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Empty Cart -->
+            <div class="empty-cart">
+              <h3>Your cart is empty</h3>
+              <p>Add items to your cart to get started</p>
+            </div>
+          </div>
+          <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-item">
+              <span>Subtotal</span>
+              <span id="subtotal-amount">$565</span>
+            </div>
+            <div class="summary-item discount">
+              <span>Discount (-20%)</span>
+              <span id="discount-amount">-$113</span>
+            </div>
+            <div class="summary-item">
+              <span>Delivery Fee</span>
+              <span id="delivery-fee">$15</span>
+            </div>
+            <hr />
+            <div class="summary-item total">
+              <span>Total</span>
+              <span id="total-amount">$467</span>
+            </div>
+            <div class="promo-code">
+              <input
+                type="text"
+                placeholder="Add promo code"
+                id="promo-input"
+              />
+              <button id="apply-promo">Apply</button>
+            </div>
+            <button class="checkout-btn">
+              Go to Checkout <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <div class="newsletter-text">
+          <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+        </div>
+        <div class="subscribe-form">
+          <input type="email" placeholder="Enter your email address" />
+          <button type="submit">Subscribe to Newsletter</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-logo">
+            <a href="#" class="logo">
+              <h3>SHOP.CO</h3>
+            </a>
+            <p>
+              We have clothes that suits your style and which you're proud to
+              wear. From women to men.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="#"><i class="bx bxl-instagram"></i></a>
+              <a href="#"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="link-column">
+              <h3>Company</h3>
+              <a href="#">About</a>
+              <a href="#">Features</a>
+              <a href="#">Works</a>
+              <a href="#">Career</a>
+            </div>
+            <div class="link-column">
+              <h3>Help</h3>
+              <a href="#">Customer Support</a>
+              <a href="#">Delivery Details</a>
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Privacy Policy</a>
+            </div>
+            <div class="link-column">
+              <h3>FAQ</h3>
+              <a href="#">Account</a>
+              <a href="#">Manage Deliveries</a>
+              <a href="#">Orders</a>
+              <a href="#">Payments</a>
+            </div>
+            <div class="link-column">
+              <h3>Resources</h3>
+              <a href="#">Free eBooks</a>
+              <a href="#">Development Tutorial</a>
+              <a href="#">How to - Blog</a>
+              <a href="#">Youtube Playlist</a>
+            </div>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+          <p>Shop.co © 2000-2024, All Rights Reserved</p>
+          <div class="footer-payment-methods">
+            <img src="img/payment-methods/visa.png" alt="Visa" />
+            <img src="img/payment-methods/mastercard.png" alt="Mastercard" />
+            <img src="img/payment-methods/paypal.png" alt="PayPal" />
+            <img src="img/payment-methods/a-pay.png" alt="Apple Pay" />
+            <img src="img/payment-methods/g-pay.png" alt="Google Pay" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

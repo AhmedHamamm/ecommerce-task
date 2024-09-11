@@ -48,7 +48,9 @@
         <div class="nav-icons">
           <!-- Cart -->
           <div class="cart">
-            <i class="bx bx-cart"></i>
+            <a href="cart.html">
+              <i class="bx bx-cart"></i>
+            </a>
           </div>
           <!-- User -->
           <div class="user">
@@ -62,7 +64,7 @@
     <nav class="breadcrumb">
       <ul>
         <li>
-          <a href="#">Home <i class="bx bx-chevron-right"></i> </a>
+          <a href="index.html">Home <i class="bx bx-chevron-right"></i> </a>
         </li>
         <li>
           <a href="#">Shop <i class="bx bx-chevron-right"></i> </a>
@@ -189,11 +191,6 @@
         <div class="product-tabs-content">
           <div id="product-details" class="tab-content">
             <h3>Product Details</h3>
-            <p>
-              This graphic t-shirt features a unique design that's perfect for
-              any occasion. Crafted from a soft and breathable fabric, it offers
-              both style and comfort.
-            </p>
           </div>
           <div id="reviews" class="tab-content active">
             <div class="reviews-header">
@@ -206,39 +203,191 @@
                     <option value="most-unhelpful">Most Unhelpful</option>
                   </select>
                 </div>
-                <button class="add-review-btn">Add a Review</button>
+                <button class="add-review-btn">Write a Review</button>
               </div>
             </div>
-            <div class="review-wrapper">
-              <div class="review-item">
-                <div class="stars">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
+            <div class="reviews-container">
+              <div class="review-wrapper">
+                <!-- Review Item -->
+                <div class="review-item">
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                    <div class="review-actions">
+                      <button class="dots-icon">
+                        <i class="bx bx-dots-horizontal-rounded"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="reviewer-info">
+                    <p class="reviewer-name">
+                      Samantha D. <i class="bx bxs-check-circle"></i>
+                    </p>
+                  </div>
+                  <p class="review-text">
+                    "I absolutely love this t-shirt! The design is unique and
+                    the fabric feels so comfortable. As a fellow designer, I
+                    appreciate the attention to detail. It's become my favorite
+                    go-to shirt."
+                  </p>
+                  <p class="review-date">Posted on August 14, 2023</p>
+                </div>
+
+                <!-- Review Item -->
+                <div class="review-item">
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <div class="review-actions">
+                      <button class="dots-icon">
+                        <i class="bx bx-dots-horizontal-rounded"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="reviewer-info">
+                    <p class="reviewer-name">
+                      Alex M. <i class="bx bxs-check-circle"></i>
+                    </p>
+                  </div>
+                  <p class="review-text">
+                    "The t-shirt exceeded my expectations! The colors are
+                    vibrant and the print quality is top-notch. Being a UI/UX
+                    designer myself, I'm quite picky about aesthetics, and this
+                    t-shirt definitely gets a thumbs up from me."
+                  </p>
+                  <p class="review-date">Posted on August 14, 2023</p>
+                </div>
               </div>
-              <div class="reviewer-info">
-                <p class="reviewer-name">
-                  Sarah M. <i class="bx bxs-check-circle"></i>
-                </p>
+
+              <div class="review-wrapper">
+                <!-- Review Item -->
+                <div class="review-item">
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                    <div class="review-actions">
+                      <button class="dots-icon">
+                        <i class="bx bx-dots-horizontal-rounded"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="reviewer-info">
+                    <p class="reviewer-name">
+                      Ethan R. <i class="bx bxs-check-circle"></i>
+                    </p>
+                  </div>
+                  <p class="review-text">
+                    "This t-shirt is a must-have for anyone who appreciates good
+                    design. The minimalistic yet stylish pattern caught my eye,
+                    and the fit is perfect. I can see the designer's touch in
+                    every aspect of this shirt."
+                  </p>
+                  <p class="review-date">Posted on August 16, 2023</p>
+                </div>
+
+                <!-- Review Item -->
+                <div class="review-item">
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <div class="review-actions">
+                      <button class="dots-icon">
+                        <i class="bx bx-dots-horizontal-rounded"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="reviewer-info">
+                    <p class="reviewer-name">
+                      Olivia P. <i class="bx bxs-check-circle"></i>
+                    </p>
+                  </div>
+                  <p class="review-text">
+                    "As a UI/UX enthusiast, I value simplicity and
+                    functionality. This t-shirt not only represents those
+                    principles but also feels great to wear. It's evident that
+                    the designer poured their creativity into making this
+                    t-shirt stand out."
+                  </p>
+                  <p class="review-date">Posted on August 17, 2023</p>
+                </div>
               </div>
-              <p class="review-text">
-                "I'm blown away by the quality and style of the clothes I
-                received from Shop.co. From casual wear to elegant dresses,
-                every piece I've bought has exceeded my expectations.”
-              </p>
+              <div class="review-wrapper">
+                <!-- Review Item -->
+                <div class="review-item">
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <div class="review-actions">
+                      <button class="dots-icon">
+                        <i class="bx bx-dots-horizontal-rounded"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="reviewer-info">
+                    <p class="reviewer-name">
+                      Liam K. <i class="bx bxs-check-circle"></i>
+                    </p>
+                  </div>
+                  <p class="review-text">
+                    "This t-shirt is a fusion of comfort and creativity. The
+                    fabric is soft, and the design speaks volumes about the
+                    designer's skill. It's like wearing a piece of art that
+                    reflects my passion for both design and fashion."
+                  </p>
+                  <p class="review-date">Posted on August 18, 2023</p>
+                </div>
+
+                <!-- Review Item -->
+                <div class="review-item">
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                    <div class="review-actions">
+                      <button class="dots-icon">
+                        <i class="bx bx-dots-horizontal-rounded"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="reviewer-info">
+                    <p class="reviewer-name">
+                      Ava H. <i class="bx bxs-check-circle"></i>
+                    </p>
+                  </div>
+                  <p class="review-text">
+                    "I'm not just wearing a t-shirt; I'm wearing a piece of
+                    design philosophy. The intricate details and thoughtful
+                    layout of the design make this shirt a conversation
+                    starter."
+                  </p>
+                  <p class="review-date">Posted on August 19, 2023</p>
+                </div>
+              </div>
             </div>
+            <!-- load more btn -->
+            <button class="load-more-reviews-btn">Load More Reviews</button>
           </div>
           <div id="faqs" class="tab-content">
             <h3>FAQs</h3>
-            <p>
-              Q: What sizes are available?<br />
-              A: This t-shirt is available in sizes S, M, L, and XL.<br /><br />
-              Q: Is the material machine washable?<br />
-              A: Yes, the t-shirt can be machine washed in cold water and tumble
-              dried on low.
-            </p>
           </div>
         </div>
       </div>
@@ -338,7 +487,7 @@
     <section class="newsletter">
       <div class="newsletter-content">
         <div class="newsletter-text">
-          <h2>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h2>
+          <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
         </div>
         <form class="subscribe-form">
           <input
@@ -418,6 +567,9 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="js/script.js"></script>
   </body>

@@ -1,0 +1,224 @@
+.cart-section h3 {
+  font-size: var(--h3-font-size);
+  font-weight: 900;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cart-items-wrapper {
+  width: 60%;
+  border: 1px solid var(--primary-color);
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item-image {
+  width: 25%;
+  margin-right: 1.5rem;
+  border-radius: 1rem;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item-name {
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.cart-item-id {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: 0.25rem;
+}
+
+.cart-item-options {
+  font-size: var(--small-font-size);
+}
+.cart-item-options p:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.cart-item-color {
+  color: var(--text-color-light);
+}
+.cart-item-price {
+  font-size: var(--h4-font-size);
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+}
+
+.cart-quantity-btn {
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-color);
+}
+
+.quantity-input {
+  width: 2rem;
+  text-align: center;
+  border: none;
+  font-size: var(--normal-font-size);
+  padding: 0.5rem 0;
+}
+
+.remove-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  padding: 0.5rem;
+}
+
+.remove-item:hover {
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+.remove-item i {
+  color: #ff3333;
+}
+
+.remove-item i:hover {
+  scale: 1.2;
+}
+.cart-item-options span {
+  opacity: 0.4;
+}
+.cart-item-price-quantity-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.empty-cart {
+  display: none;
+}
+
+.cart-summary {
+  width: 40%;
+  padding: 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 2rem;
+}
+
+.cart-summary h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.summary-item span:first-child {
+  opacity: 0.6;
+  color: var(--accent-color);
+}
+.summary-item.discount {
+  color: #ff3b30;
+}
+
+.summary-item.total {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.promo-code {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.promo-code input {
+  flex-grow: 1;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+}
+
+.promo-code input:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+.promo-code button {
+  padding: 1rem 3rem;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promo-code button:hover {
+  color: var(--accent-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--accent-color);
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-btn i {
+  margin-left: 0.5rem;
+  font-size: 1.7rem;
+  transition: transform 0.3s ease;
+}
+
+.checkout-btn:hover {
+  color: var(--accent-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--accent-color);
+}
+.checkout-btn:hover i {
+  transform: translateX(1rem);
+}

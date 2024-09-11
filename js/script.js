@@ -1,3 +1,5 @@
+"use strict";
+
 // select elements
 const closeBtn = document.querySelector(".signp-close-btn");
 const cart = document.querySelector(".cart");
@@ -129,15 +131,21 @@ function updateQuantity(change) {
   quantityInput.value = currentQuantity;
 }
 
-minusBtn.addEventListener("click", () => updateQuantity(-1));
-plusBtn.addEventListener("click", () => updateQuantity(1));
+if (minusBtn) {
+  minusBtn.addEventListener("click", () => updateQuantity(-1));
+}
+if (plusBtn) {
+  plusBtn.addEventListener("click", () => updateQuantity(1));
+}
 
 // Prevent manual input of negative numbers
-quantityInput.addEventListener("change", () => {
-  if (parseInt(quantityInput.value) < 1) {
-    quantityInput.value = 1;
-  }
-});
+if (quantityInput) {
+  quantityInput.addEventListener("change", () => {
+    if (parseInt(quantityInput.value) < 1) {
+      quantityInput.value = 1;
+    }
+  });
+}
 
 // Product tabs
 const tabButtons = document.querySelectorAll(
@@ -164,3 +172,113 @@ tabButtons.forEach((button) => {
     }
   });
 });
+
+// Load more reviews function
+const loadMoreReviewsBtn = document.querySelector(".load-more-reviews-btn");
+let reviewsLoaded = 0;
+
+if (loadMoreReviewsBtn) {
+  loadMoreReviewsBtn.addEventListener("click", () => {
+    const reviewsContainer = document.querySelector(".reviews-container");
+    const reviewWrapper = document.querySelector(".review-wrapper");
+
+    if (reviewsContainer && reviewWrapper) {
+      const reviewItems = reviewWrapper.querySelectorAll(".review-item");
+
+      //  newReviewWrapper for creating div for reviews
+      const newReviewWrapper = document.createElement("div");
+      newReviewWrapper.className = "review-wrapper";
+
+      // This is for loading 2 reviews at a time ( check for loop low 3ayez 1 review 'i < 2') it loops twice
+      for (let i = 0; i < 2; i++) {
+        if (reviewItems[reviewsLoaded % reviewItems.length]) {
+          const newReview =
+            reviewItems[reviewsLoaded % reviewItems.length].cloneNode(true);
+          newReviewWrapper.appendChild(newReview);
+          reviewsLoaded++;
+        }
+      }
+
+      if (newReviewWrapper.children.length > 0) {
+        reviewsContainer.appendChild(newReviewWrapper);
+        console.log("Loaded more reviews");
+      }
+    } else {
+      console.error("Reviews wrapper not found");
+    }
+  });
+}
+
+// Remove item from cart
+const removeItemBtns = document.querySelectorAll(".remove-item");
+removeItemBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    console.log("Remove item");
+    // Add logic to remove the item from the cart
+    const cartItem = btn.closest(".cart-item");
+    if (cartItem) {
+      cartItem.remove();
+
+      // if cart is empty show the div (empty-cart)
+      const cartItemsWrapper = document.querySelector(".cart-items-wrapper");
+      const cartItems = cartItemsWrapper.querySelectorAll(".cart-item");
+      if (cartItems.length === 0) {
+        const emptyCartDiv = document.querySelector(".empty-cart");
+        if (emptyCartDiv) {
+          emptyCartDiv.style.display = "block";
+        }
+      }
+    }
+  });
+});
+
+// Scroll reveal animations
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+});
+
+// Hero section
+sr.reveal(".hero-content", { origin: "left" });
+sr.reveal(".hero-image", { origin: "right" });
+
+// Brands section
+sr.reveal(".brands", { interval: 100 });
+
+// Products section
+sr.reveal(".products h2", {});
+sr.reveal(".products .product-grid", { interval: 100 });
+
+// browse-by-category section
+sr.reveal(".browse-by-category h2", {});
+sr.reveal(".browse-by-category ", { interval: 100 });
+
+// Top Selling section
+sr.reveal(".top-selling .section-title", {});
+sr.reveal(".top-selling .product-card", { interval: 100 });
+
+// Browse by dress style section
+sr.reveal(".browse-by-dress-style .section-title", {});
+sr.reveal(".browse-by-dress-style .category-card", { interval: 100 });
+
+// Customer Reviews section
+sr.reveal(".customer-reviews", {});
+
+// Product Details section
+sr.reveal(".product-details .product-image", { origin: "left" });
+sr.reveal(".product-details .product-info", { origin: "right" });
+// product-details-tabs
+sr.reveal(".product-details-tabs", {});
+// cart section
+sr.reveal(".cart-items-wrapper", { origin: "left" });
+sr.reveal(".cart-summary", { origin: "right" });
+
+// Footer
+sr.reveal(".footer-top", {});
+sr.reveal(".footer-links", { interval: 100 });
+sr.reveal(".footer-bottom", {});
+
+// read it for this error : Cannot read properties of null (reading 'addEventListener')
+// https://stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null

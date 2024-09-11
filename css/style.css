@@ -4,7 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   text-decoration: none;
-  font-family: "Integral CF", sans-serif;
+  font-family: "Integral CF", poppins;
 }
 
 :root {
@@ -17,12 +17,12 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
   --accent-color: #000;
 
-  --h1-font-size: clamp(2.5rem, 5vw, 4rem);
-  --h2-font-size: clamp(2rem, 4vw, 3rem);
-  --h3-font-size: clamp(1.5rem, 3vw, 2rem);
-  --h4-font-size: clamp(1.25rem, 2vw, 1.5rem);
-  --normal-font-size: clamp(0.875rem, 1.5vw, 1rem);
-  --small-font-size: clamp(0.75rem, 1vw, 0.875rem);
+  --h1-font-size: 5rem;
+  --h2-font-size: 4rem;
+  --h3-font-size: 3rem;
+  --h4-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: clamp(0.875rem, 1vw, 1rem);
 
   --transition-speed: 0.3s;
 }
@@ -32,7 +32,12 @@ body {
   color: var(--accent-color);
   /* line-height: 1.6; */
 }
-
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+}
 .signup-banner {
   background-color: var(--banner-bg-color);
   display: flex;
@@ -203,6 +208,9 @@ body {
   font-size: var(--h4-font-size);
   transition: all var(--transition-speed) ease;
 }
+.cart a {
+  color: var(--accent-color);
+}
 
 .cart:hover,
 .user:hover {
@@ -251,7 +259,9 @@ section {
 }
 
 .hero-btn:hover {
-  background-color: var(--other-color);
+  color: var(--accent-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--accent-color);
 }
 
 .hero-stats {
@@ -579,6 +589,7 @@ section {
   object-fit: cover;
 }
 .reviewer-name {
+  font-size: 1.25rem;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -661,8 +672,9 @@ section {
 }
 
 .subscribe-form button:hover {
-  background-color: var(--primary-color);
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
 }
 
 /* Footer */

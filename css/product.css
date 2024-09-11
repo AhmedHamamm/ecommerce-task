@@ -101,10 +101,6 @@
   margin-bottom: 1rem;
 }
 
-.stars {
-  color: #ffc107;
-}
-
 .review-count {
   color: var(--text-color-light);
 }
@@ -240,12 +236,8 @@
 }
 
 /* Products tabs */
-.product-details-tabs {
-  /* margin-top: 2rem; */
-}
 
 .product-tabs-container {
-  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
@@ -273,6 +265,13 @@
 .tab-button:hover {
   color: var(--accent-color);
 }
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
 
 .product-tabs-content {
   padding: 2rem 0;
@@ -291,20 +290,76 @@
 .reviews-header-right .sort-by-dropdown {
   position: relative;
   background-color: var(--primary-color);
-  border-radius: 0.5rem;
+  padding: 1rem;
+  border-radius: 2rem;
 }
 
 .sort-by-dropdown select {
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   background-color: var(--primary-color);
 }
-.tab-content {
-  display: none;
+
+.add-review-btn {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+.add-review-btn:hover {
+  background-color: var(--first-color-alt);
+  color: var(--body-color);
+  border: 1px solid var(--accent-color);
+}
+.reviews-container .review-text {
+  padding-right: 2rem;
+}
+.reviews-container .review-item {
+  width: 50%;
+}
+.review-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
-.tab-content.active {
+.review-actions {
+  margin-left: auto;
+}
+.dots-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.dots-icon:hover {
+  opacity: 1;
+}
+.dots-icon i {
+  font-size: 2rem;
+}
+
+.review-date {
+  opacity: 0.6;
+}
+
+.load-more-reviews-btn {
   display: block;
+  margin: 2rem auto 0;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--shadow-color);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+.load-more-reviews-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
 }
